@@ -31,7 +31,7 @@ class People(object):
     def makePeople(self,averageValueConversionCoefficient, standardDeviationConversionCoefficient , averageValueLeavingCoefficient , standardDeviationLeavingCoefficient):
 
         self.conversionCoefficient = self.conversionCoefficientGenerator(averageValueConversionCoefficient,standardDeviationConversionCoefficient)
-        print(self.conversionCoefficient)
+       # print(self.conversionCoefficient)
 
 
 
@@ -62,8 +62,6 @@ class People(object):
 
     def Conversion(self):
         randomValue =random.randint(0,100)
-        print('randomValue:',randomValue)
-        print('coefficient', self.conversionCoefficient*100)
         # if the random integer is smaller than coefficient the person is converted
         if randomValue <= (self.conversionCoefficient * 100): # multiply by 100 for obtening a value between 0 and 100
             self.isConverted = True
